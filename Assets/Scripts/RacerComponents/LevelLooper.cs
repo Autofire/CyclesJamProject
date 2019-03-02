@@ -5,7 +5,7 @@ namespace Racer {
 	public class LevelLooper : MonoBehaviour {
 
 		[SerializeField] private string triggerTag = "LevelBoundary";
-		[SerializeField] private Renderer[] disableWhileTeleporting;
+		[SerializeField] private TrailRenderer[] movableTrails;
 
 		private Rigidbody2D rb;
 
@@ -20,20 +20,27 @@ namespace Racer {
 		private void OnTriggerExit2D(Collider2D other) {
 			if (enabled && other.CompareTag(triggerTag)) {
 
-				foreach (Renderer r in disableWhileTeleporting) {
-					r.enabled = false;
-				}
+				float xOffset = -other.bounds.size.x;
 
 				rb.position = new Vector3(
-					rb.position.x - other.bounds.size.x,
+					rb.position.x + xOffset,
 					rb.position.y
 				);
+
 				Debug.Log(rb.velocity);
 
-				foreach (Renderer r in disableWhileTeleporting) {
-					r.enabled = true;
-				}
-			}
-		}
+				foreach (TrailRenderer r in movableTrails) {
+					Vector3[] positions = new Vector3[r.positionCount];
+					r.GetPositions(positions);
+
+					for (int i = 0; i < positions.Length; i++) {
+						positions[i].x += xOffset;
+					}
+
+					r.SetPositions(positions);
+				} // End foreach
+			} // End if
+		} // End OnTriggerExit2D
+
 	} // End class
 } // End namespace
