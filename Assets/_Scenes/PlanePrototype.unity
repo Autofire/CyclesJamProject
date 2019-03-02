@@ -853,6 +853,9 @@ GameObject:
   - component: {fileID: 1742936079}
   - component: {fileID: 1742936080}
   - component: {fileID: 1742936082}
+  - component: {fileID: 1742936086}
+  - component: {fileID: 1742936087}
+  - component: {fileID: 1742936088}
   - component: {fileID: 1742936081}
   - component: {fileID: 1742936085}
   m_Layer: 0
@@ -924,13 +927,6 @@ MonoBehaviour:
   forwardForce: 0.5
   turnForce: 50
   turnStiffnessFactor: 8
-  boostForce: 0.25
-  maxSpeedAfterImpact: 8
-  loopBoundaryTag: LevelBoundary
-  boosterTag: Booster
-  wallTag: Wall
-  disableWhileTeleporting:
-  - {fileID: 1742936085}
 --- !u!23 &1742936083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1076,6 +1072,45 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1742936086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742936078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edb1b6b8f2bc49b18c571fed01907ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostForce: 0.25
+  triggerTag: Booster
+--- !u!114 &1742936087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742936078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1776ca7c4174367b5f50f6ea0373ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityCap: {x: 8, y: Infinity}
+  triggerTag: Wall
+--- !u!114 &1742936088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742936078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d6d6ff2eba4475c8d624a92b96c008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerTag: LevelBoundary
+  disableWhileTeleporting: []
 --- !u!1 &2004396646
 GameObject:
   m_ObjectHideFlags: 0
