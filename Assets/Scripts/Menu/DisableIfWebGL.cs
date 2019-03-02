@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DisableIfWebGL : MonoBehaviour
 {
+	[SerializeField] private GameObject target;
     
     void Awake()
     {
 #if UNITY_WEBGL
-		enabled = false;
+		//enabled = false;
+		target.SetActive(false);
 #else
-		enabled = true;
+		//enabled = true;
 #endif
 	}
 }
