@@ -42,7 +42,7 @@ namespace Racer {
 					r.GetPositions(positions);
 
 					for (int i = 0; i < positions.Length; i++) {
-						positions[i].x += xOffset;
+						positions[i].x -= other.bounds.size.x;
 					}
 
 					r.SetPositions(positions);
