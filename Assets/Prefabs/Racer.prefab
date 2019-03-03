@@ -312,8 +312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTag: LevelBoundary
-  movableTrails:
-  - {fileID: 1742936085}
   loopEvent:
     gameEvent: {fileID: 0}
     unityEvent:
