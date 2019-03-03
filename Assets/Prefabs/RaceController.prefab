@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2500513835111272428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2500513835111272431}
+  - component: {fileID: 2500513835111272400}
+  - component: {fileID: 2500513835111272401}
+  - component: {fileID: 2500513835111272430}
+  m_Layer: 0
+  m_Name: RaceController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2500513835111272431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500513835111272428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2500513835111272400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500513835111272428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed97bfe59d6b344ee843ff9f03df5e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 27f9931d9fe2c41dbab29ef09cd12c2a, type: 2}
+  tickFrequency:
+    _useInternal: 1
+    internalValue: 1
+    variable: {fileID: 0}
+  changePerTick:
+    _useInternal: 1
+    internalValue: -1
+    variable: {fileID: 0}
+--- !u!114 &2500513835111272401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500513835111272428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a328f729f94b54f2b9e0e08b209f440f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerEvent: {fileID: 11400000, guid: 27f9931d9fe2c41dbab29ef09cd12c2a, type: 2}
+  value1:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 27f9931d9fe2c41dbab29ef09cd12c2a, type: 2}
+  mode: 4
+  value2:
+    _useInternal: 1
+    internalValue: 0
+    variable: {fileID: 0}
+  invoker:
+    gameEvent: {fileID: 0}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2500513835111272430}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2500513835111272400}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+--- !u!114 &2500513835111272430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500513835111272428}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8226bcc160542d0a0581f808559fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raceStartTime:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 89e6cd560c0224b7994665a294933ef4, type: 2}
+  startEvent:
+    gameEvent: {fileID: 11400000, guid: a2dabaa76531f4f26b2953880201995b, type: 2}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  currentRaceMode:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 099bf46a013db4edf9f8b5b04dec597f, type: 2}

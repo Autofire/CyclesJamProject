@@ -422,7 +422,10 @@ namespace ReachBeyond.VariableObjects.Editor {
 				"bool",  "byte",   "char", "decimal", "double",
 				"float", "int",    "long", "object",  "sbyte",
 				"short", "string", "uint", "ulong",   "ushort"
-			};	
+			};
+
+			// Want to exclude dots because of namespace/class nesting.
+			targetName = targetName.Replace(".", "");
 
 			return builtinTypeNames.Contains(targetName)
 				   || provider.IsValidIdentifier(targetName);
