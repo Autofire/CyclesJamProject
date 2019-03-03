@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d284b935cebf2941b7803ab6949ffa8, type: 3}
   m_Name: RaceStartCountdown
   m_EditorClassIdentifier: 
-  _defaultValue: 6
-  _value: 0
+  _defaultValue: 5
+  _value: -2
