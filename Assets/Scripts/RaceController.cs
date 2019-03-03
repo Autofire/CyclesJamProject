@@ -21,6 +21,7 @@ public class RaceController : MonoBehaviour
 
 	public void OnEnable() {
 		raceStartTime.Value = Time.time;
+		LapCounter.ClearAllLapCounts();
 		startEvent.Invoke();
 	}
 

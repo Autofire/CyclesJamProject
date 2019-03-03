@@ -2,7 +2,7 @@
 using UnityEngine.Assertions;
 using ReachBeyond.VariableObjects;
 
-public class TimerController : MonoBehaviour
+public class ClockDisplay : MonoBehaviour
 {
 	[SerializeField] private TMPro.TextMeshProUGUI textObj;
 	[SerializeField] private FloatConstReference startTime;
