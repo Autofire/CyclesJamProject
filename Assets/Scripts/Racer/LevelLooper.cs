@@ -30,6 +30,22 @@ namespace Racer {
 					rb.position.y
 				);
 
+				Debug.Log(rb.velocity);
+
+				foreach (TrailRenderer r in movableTrails) {
+					Vector3[] positions = new Vector3[r.positionCount];
+					r.GetPositions(positions);
+
+					for (int i = 0; i < positions.Length; i++) {
+						positions[i].x -= other.bounds.size.x;
+					}
+
+					r.SetPositions(positions);
+
+					r.emitting = true;
+					r.enabled = true;
+				} // End foreach
+
 				loopEvent.Invoke();
 
 			} // End if
