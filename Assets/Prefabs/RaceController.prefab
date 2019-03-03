@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2500513835111272400}
   - component: {fileID: 2500513835111272401}
   - component: {fileID: 2500513835111272430}
+  - component: {fileID: 2500513836249277427}
   m_Layer: 0
   m_Name: RaceController
   m_TagString: Untagged
@@ -128,10 +129,21 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   endEvent:
-    gameEvent: {fileID: 0}
+    gameEvent: {fileID: 11400000, guid: 880ed6a8ea77744ee92a67f0a9519489, type: 2}
     unityEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2500513836249277427}
+          m_MethodName: Apply
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   raceStartTime:
@@ -148,5 +160,22 @@ MonoBehaviour:
     variable: {fileID: 11400000, guid: 099bf46a013db4edf9f8b5b04dec597f, type: 2}
   timeLimit:
     _useInternal: 1
-    internalValue: 10
+    internalValue: 1
+    variable: {fileID: 0}
+--- !u!114 &2500513836249277427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500513835111272428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cdc8222e0ed478aa0db07ed8541707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadOnEnable: 0
+  targetScale:
+    _useInternal: 1
+    internalValue: 0.6
     variable: {fileID: 0}

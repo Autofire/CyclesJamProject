@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 317070033}
   - component: {fileID: 317070032}
   - component: {fileID: 317070035}
+  - component: {fileID: 317070036}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -516,8 +517,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 317070036}
+        m_MethodName: Apply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 317070032}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 317070035}
-        m_MethodName: LoadScene
+        m_MethodName: BeginAsyncLoad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -579,6 +602,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetScene: PlanePrototype
+  loadOnEnable: 0
+  loadDelay: 0
+--- !u!114 &317070036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317070030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b3748140ae749308854bf197cd3c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 27f9931d9fe2c41dbab29ef09cd12c2a, type: 2}
+  source:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: ca9d0def405d94609adffa8d8abf6de5, type: 2}
 --- !u!1 &337152982
 GameObject:
   m_ObjectHideFlags: 0

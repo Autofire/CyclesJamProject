@@ -6,6 +6,7 @@ public class ClockDisplay : MonoBehaviour
 {
 	[SerializeField] private TMPro.TextMeshProUGUI textObj;
 	[SerializeField] private FloatConstReference startTime;
+	[SerializeField] private FloatConstReference endTime;
 
 	private void Awake() {
 		Assert.IsNotNull(textObj);
@@ -13,18 +14,25 @@ public class ClockDisplay : MonoBehaviour
 
 
 	private void OnGUI() {
-		float currentTime = Time.time - startTime.ConstValue;
+		textObj.SetText(TimeToStr(Time.time - startTime.ConstValue));
+	}
 
-		int minutes = ((int)currentTime) / 60;
-		int seconds = ((int)currentTime) % 60;
-		float secondFraction = currentTime % 1f;
+
+	public void ShowEndTime() {
+		textObj.SetText(TimeToStr(endTime.ConstValue - startTime.ConstValue));
+	}
+
+	private string TimeToStr(float timeInSeconds) {
+
+		int minutes = ((int)timeInSeconds) / 60;
+		int seconds = ((int)timeInSeconds) % 60;
+		float secondFraction = timeInSeconds % 1f;
 		int milliseconds = Mathf.RoundToInt(secondFraction * 1000f);
 
-		string[] timerValues = new string[] { 
+		string[] timerValues = new string[] {
 			minutes.ToString("D2"), seconds.ToString("D2"), milliseconds.ToString("D3")
 		};
 
-		textObj.SetText(string.Join( ":", timerValues ));
+		return string.Join(":", timerValues);
 	}
-
 }

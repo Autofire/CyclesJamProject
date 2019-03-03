@@ -16,6 +16,7 @@ public class RaceController : MonoBehaviour
 	[SerializeField] private FloatReference raceEndTime;
 	[SerializeField] private RaceModeConstReference currentRaceMode;
 
+
 	[Header("TimeLimit settings")]
 	[SerializeField] private FloatConstReference timeLimit;
 
@@ -25,16 +26,12 @@ public class RaceController : MonoBehaviour
 		startEvent.Invoke();
 	}
 
-	public void OnDisable() {
-		raceEndTime.Value = Time.time;
-		endEvent.Invoke();
-	}
-
 	public void Update() {
 		switch(currentRaceMode.ConstValue) {
 			case RaceMode.TimeLimit:
 				if(Time.time >= raceStartTime.ConstValue + timeLimit) {
-					enabled = false;
+					//enabled = false;
+					EndRace();
 				}
 				break;
 
@@ -42,5 +39,12 @@ public class RaceController : MonoBehaviour
 				Debug.Log("I got nothing for this");
 				break;
 		}
+	}
+
+	public void EndRace() {
+		raceEndTime.Value = Time.time;
+		endEvent.Invoke();
+
+		enabled = false;
 	}
 }

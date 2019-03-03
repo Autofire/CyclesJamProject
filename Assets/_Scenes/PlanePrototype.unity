@@ -996,7 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
+  m_ShowDebugText: 1
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
@@ -1162,13 +1162,15 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 2004396650}
-    - target: {fileID: 1123049966, guid: eb6c8ce9677b346b79302108a2d018da, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -88.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123049966, guid: eb6c8ce9677b346b79302108a2d018da, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 177.43
-      objectReference: {fileID: 0}
+    - target: {fileID: 3263380611643251303, guid: eb6c8ce9677b346b79302108a2d018da,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 2004396650}
+    - target: {fileID: 3263380611643251303, guid: eb6c8ce9677b346b79302108a2d018da,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 2004396650}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c8ce9677b346b79302108a2d018da, type: 3}

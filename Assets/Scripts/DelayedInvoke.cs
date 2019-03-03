@@ -14,9 +14,6 @@ public class DelayedInvoke : MonoBehaviour {
 	}
 
 	void Update() {
-		// We use a loop for this in the case that tickFrequency
-		// ends up being shorter than the Update clock. That way, we'll
-		// still count the same way regardless of the time step.
 		if(Time.time >= invokeTime) {
 			invoker.Invoke();
 			enabled = false;
