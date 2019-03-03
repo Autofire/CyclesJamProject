@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using ReachBeyond.EventObjects;
 
 namespace Racer {
 	[RequireComponent(typeof(Rigidbody2D))]
@@ -6,6 +7,8 @@ namespace Racer {
 
 		[SerializeField] private string triggerTag = "LevelBoundary";
 		[SerializeField] private TrailRenderer[] movableTrails;
+
+		[SerializeField] private EventObjectInvoker loopEvent;
 
 		private Rigidbody2D rb;
 
@@ -19,6 +22,11 @@ namespace Racer {
 
 		private void OnTriggerExit2D(Collider2D other) {
 			if (enabled && other.CompareTag(triggerTag)) {
+
+				foreach (TrailRenderer r in movableTrails) {
+					r.emitting = false;
+					r.enabled = false;
+				}
 
 				float xOffset = -other.bounds.size.x;
 
@@ -38,7 +46,12 @@ namespace Racer {
 					}
 
 					r.SetPositions(positions);
+
+					r.emitting = true;
+					r.enabled = true;
 				} // End foreach
+
+				loopEvent.Invoke();
 			} // End if
 		} // End OnTriggerExit2D
 

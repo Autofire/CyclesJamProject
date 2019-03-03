@@ -120,10 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8226bcc160542d0a0581f808559fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raceStartTime:
-    _useInternal: 0
-    internalValue: 0
-    variable: {fileID: 11400000, guid: 89e6cd560c0224b7994665a294933ef4, type: 2}
   startEvent:
     gameEvent: {fileID: 11400000, guid: a2dabaa76531f4f26b2953880201995b, type: 2}
     unityEvent:
@@ -131,7 +127,26 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  endEvent:
+    gameEvent: {fileID: 0}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  raceStartTime:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 89e6cd560c0224b7994665a294933ef4, type: 2}
+  raceEndTime:
+    _useInternal: 0
+    internalValue: 0
+    variable: {fileID: 11400000, guid: 8c27ab4dbc62746c587f8625d6e27ac7, type: 2}
   currentRaceMode:
     _useInternal: 0
     internalValue: 0
     variable: {fileID: 11400000, guid: 099bf46a013db4edf9f8b5b04dec597f, type: 2}
+  timeLimit:
+    _useInternal: 1
+    internalValue: 10
+    variable: {fileID: 0}
