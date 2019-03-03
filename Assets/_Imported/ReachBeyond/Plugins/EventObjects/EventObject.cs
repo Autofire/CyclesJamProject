@@ -28,7 +28,7 @@ namespace ReachBeyond.EventObjects {
 	[CreateAssetMenu(menuName = "EventObject", order = -20100)]
 	public class EventObject : ScriptableObject {
 
-		private List<EventObjectListener> listeners = new List<EventObjectListener>();
+		private List<IEventObjectListener> listeners = new List<IEventObjectListener>();
 
 		/// <summary>
 		/// Raise the event, alerting all listeners that the event has been triggered.
@@ -44,7 +44,7 @@ namespace ReachBeyond.EventObjects {
 		/// </summary>
 		/// <param name="listener">Listener to add.</param>
 		/// <returns>True if successfully registered; false otherwise.</returns>
-		public bool RegisterListener(EventObjectListener listener) {
+		public bool RegisterListener(IEventObjectListener listener) {
 			// If this ever bogs down, begin using a HashSet in addition
 			// to a list. However, this could get quite memory heavy if we
 			// did it all the time.
@@ -62,7 +62,7 @@ namespace ReachBeyond.EventObjects {
 		/// </summary>
 		/// <param name="listener">Listener to unregister.</param>
 		/// <returns>True if successfully unregistered; false otherwise.</returns>
-		public bool UnregisterListener(EventObjectListener listener) {
+		public bool UnregisterListener(IEventObjectListener listener) {
 			return listeners.Remove(listener);
 		}
 

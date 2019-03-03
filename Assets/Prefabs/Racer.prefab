@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1742936088}
   - component: {fileID: 114479876992181306}
   - component: {fileID: 1742936085}
+  - component: {fileID: 597571075594763051}
   m_Layer: 0
   m_Name: Racer
   m_TagString: Untagged
@@ -296,3 +297,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &597571075594763051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020a2aa00b8424a00b208752c89058f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variable: {fileID: 11400000, guid: 65f09f2f4b8df43d3b7463db30bd9970, type: 2}
+  targetValue: {fileID: 4404111214261516}
+  uponConflict: 0
+  cleanupSignal: 0
