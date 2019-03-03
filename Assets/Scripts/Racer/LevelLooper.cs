@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using ReachBeyond.EventObjects;
 
 namespace Racer {
@@ -7,6 +6,7 @@ namespace Racer {
 	public class LevelLooper : MonoBehaviour {
 
 		[SerializeField] private string triggerTag = "LevelBoundary";
+		[SerializeField] private TrailRenderer[] movableTrails;
 
 		[SerializeField] private EventObjectInvoker loopEvent;
 
@@ -22,6 +22,11 @@ namespace Racer {
 
 		private void OnTriggerExit2D(Collider2D other) {
 			if (enabled && other.CompareTag(triggerTag)) {
+
+				foreach (TrailRenderer r in movableTrails) {
+					r.emitting = false;
+					r.enabled = false;
+				}
 
 				float xOffset = -other.bounds.size.x;
 
@@ -47,10 +52,8 @@ namespace Racer {
 				} // End foreach
 
 				loopEvent.Invoke();
-
 			} // End if
 		} // End OnTriggerExit2D
-
 
 	} // End class
 } // End namespace
