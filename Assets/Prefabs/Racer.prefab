@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 1742936087}
   - component: {fileID: 1742936088}
   - component: {fileID: 8872822027254068757}
+  - component: {fileID: 3256913445120681318}
   m_Layer: 0
   m_Name: Racer
   m_TagString: Untagged
@@ -355,3 +356,32 @@ MonoBehaviour:
     _useInternal: 0
     internalValue: Test
     variable: {fileID: 11400000, guid: 2ca23ba40dee14af6a93813edb516930, type: 2}
+--- !u!114 &3256913445120681318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83fa1cb37729e314ab95edd17000d602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerEvent: {fileID: 11400000, guid: 880ed6a8ea77744ee92a67f0a9519489, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1742936088}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
