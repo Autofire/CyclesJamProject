@@ -7,9 +7,19 @@ public class ClockDisplay : MonoBehaviour
 	[SerializeField] private TMPro.TextMeshProUGUI textObj;
 	[SerializeField] private FloatConstReference startTime;
 	[SerializeField] private FloatConstReference endTime;
+	[Tooltip("If true, the time between start and end time is shown, and " +
+		"no further updates are made")]
+	[SerializeField] private bool oneShot = false;
 
 	private void Awake() {
 		Assert.IsNotNull(textObj);
+	}
+
+	private void OnEnable() {
+		if(oneShot) {
+			ShowEndTime();
+			enabled = false;
+		}
 	}
 
 

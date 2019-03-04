@@ -5,7 +5,7 @@ using UnityEngine;
 using ReachBeyond.EventObjects;
 using ReachBeyond.VariableObjects;
 
-public class EndOfRaceMessageDisplay : AbstractEventObjectListener
+public class RaceModeConditional : AbstractEventObjectListener
 {
 	[SerializeField] GameObject enableTarget;
 	[SerializeField] RaceModeConstReference currentRaceMode;
