@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ReachBeyond.VariableObjects {
 
 	[CreateAssetMenu(menuName="Variable/RaceMode")]
-	public class RaceModeVariable : Base.StructVariable<RaceController.RaceMode> {}
+	public class RaceModeVariable : Base.StructVariable<RaceController.RaceMode> { }
 
 	[System.Serializable]
 	public class RaceModeReference : Base.Reference<RaceController.RaceMode, RaceModeVariable> {}

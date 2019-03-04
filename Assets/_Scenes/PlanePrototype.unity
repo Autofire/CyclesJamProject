@@ -573,10 +573,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab:
-    _useInternal: 1
+    _useInternal: 0
     internalValue: {fileID: 1889738242903624, guid: a27daf0b44cba4c7dad7aac6dcbdeeb2,
       type: 3}
-    variable: {fileID: 0}
+    variable: {fileID: 11400000, guid: 631eadf74633041cdb9a430d54cc3153, type: 2}
   targetPoint:
     _useInternal: 1
     internalValue: {fileID: 686483793}
