@@ -17,8 +17,11 @@ public class RaceController : MonoBehaviour
 	[SerializeField] private RaceModeConstReference currentRaceMode;
 
 
-	[Header("TimeLimit settings")]
+	[Header("Time limit settings")]
 	[SerializeField] private FloatConstReference timeLimit;
+
+	[Header("Lap limit settings")]
+	[SerializeField] private IntConstReference lapTarget;
 
 	public void OnEnable() {
 		raceStartTime.Value = Time.time;
@@ -35,8 +38,27 @@ public class RaceController : MonoBehaviour
 				}
 				break;
 
+			case RaceMode.LapLimit:
+				// Do nothing; we'll get notified to check this
+				// whenever a racer makes a lap
+				break;
+		}
+	}
+
+	public void CheckLaps() {
+		switch(currentRaceMode.ConstValue) {
+			case RaceMode.LapLimit:
+				List<int> laps = new List<int>(LapCounter.LapCount.Values);
+
+				bool allRacersMetLapTarget =
+					laps.TrueForAll((count) => count >= lapTarget.ConstValue);
+
+				if(allRacersMetLapTarget) {
+					EndRace();
+				}
+
+				break;
 			default:
-				Debug.Log("I got nothing for this");
 				break;
 		}
 	}

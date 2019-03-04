@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48abe33775cfc4382ac2fd13e0903854, type: 3}
   m_Name: SelectedRaceMode
   m_EditorClassIdentifier: 
-  _defaultValue: 1
-  _value: 0
+  _defaultValue: 0
+  _value: 1

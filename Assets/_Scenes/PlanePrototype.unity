@@ -740,6 +740,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e32106351dd44e1eb015ba1e2d37285, type: 3}
+--- !u!1 &1260064857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2500513835111272428, guid: 324aee4ba60f64b4a8fc3b20d18793fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2500513836249277425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1260064858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260064857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83fa1cb37729e314ab95edd17000d602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerEvent: {fileID: 11400000, guid: 77889237ab23c418b9e755333c318f64, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1260064859}
+        m_MethodName: CheckLaps
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1260064859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2500513835111272430, guid: 324aee4ba60f64b4a8fc3b20d18793fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2500513836249277425}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260064857}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8226bcc160542d0a0581f808559fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1342915426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286378901052918, guid: 3e32106351dd44e1eb015ba1e2d37285,
@@ -1092,6 +1139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeLimit.internalValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500513835111272430, guid: 324aee4ba60f64b4a8fc3b20d18793fa,
+        type: 3}
+      propertyPath: lapTarget.internalValue
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324aee4ba60f64b4a8fc3b20d18793fa, type: 3}
