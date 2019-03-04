@@ -9523,6 +9523,7 @@ GameObject:
   - component: {fileID: 8107911896477999458}
   - component: {fileID: 2489981591913033669}
   - component: {fileID: 8841481326770273891}
+  - component: {fileID: 8431411830854079604}
   m_Layer: 0
   m_Name: BoostParticle
   m_TagString: Untagged
@@ -9661,6 +9662,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7c27a13555c6947eab6aca916a0f03ed, type: 3}
   playOnAwake: 1
   source: {fileID: 2489981591913033669}
+--- !u!114 &8431411830854079604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8107911896477999457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dea07608ed2da545b8eb6e0997af1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 1
 --- !u!1 &8357081324042649638
 GameObject:
   m_ObjectHideFlags: 0

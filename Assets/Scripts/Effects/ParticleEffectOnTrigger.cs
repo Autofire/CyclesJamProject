@@ -13,12 +13,17 @@ using System.Collections.Generic;
 public class ParticleEffectOnTrigger : MonoBehaviour
 {
     // Local GameObject enabled/disabled to create the effect
-    [SerializeField] private GameObject particle;
-    // Time for which the particle stays before being destroyed
-    [SerializeField] private float lifetime;
+    [SerializeField] private GameObject particlePrefab;
     // Any trigger with one of these tags will trigger the particle effect
     [SerializeField] private List<string> triggerTags;
+    // A group of reusable copies of the particle prefab
+    private ObjectPool<Transform> particlePool;
 
+    // Initialize the particle pool
+    private void Start()
+    {
+        particlePool = new ObjectPool<Transform>(particlePrefab, "TriggerParticles");
+    }
     // If the other collider's tag is in the list, trigger the particle effect
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,18 +33,11 @@ public class ParticleEffectOnTrigger : MonoBehaviour
             TriggerParticleEffect();
         }
     }
-    // Reactivate the local object, then disable it after specified time
+    // Get an object from the pool, move it, and activate it
     private void TriggerParticleEffect()
     {
-        // Reactivate the particle
-        particle.SetActive(false);
-        particle.SetActive(true);
-        // Cause the particle to disable after specified time
-        CancelInvoke();
-        Invoke("DisableParticle", lifetime);
-    }
-    private void DisableParticle()
-    {
-        particle.SetActive(false);
+        Transform particleTrans = particlePool.getOneQuick;
+        particleTrans.position = transform.position;
+        particleTrans.gameObject.SetActive(true);
     }
 }
