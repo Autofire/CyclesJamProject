@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d284b935cebf2941b7803ab6949ffa8, type: 3}
   m_Name: LapTarget
   m_EditorClassIdentifier: 
-  _defaultValue: 0
-  _value: 0
+  _defaultValue: 3
+  _value: 30

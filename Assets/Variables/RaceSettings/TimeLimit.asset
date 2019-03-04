@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2207075ded2ef4e22bd5ea5fdf234d43, type: 3}
   m_Name: TimeLimit
   m_EditorClassIdentifier: 
-  _defaultValue: 0
-  _value: 0
+  _defaultValue: 10
+  _value: 10
