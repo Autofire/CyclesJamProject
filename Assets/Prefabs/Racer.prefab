@@ -351,3 +351,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+  name:
+    _useInternal: 0
+    internalValue: Test
+    variable: {fileID: 11400000, guid: 2ca23ba40dee14af6a93813edb516930, type: 2}

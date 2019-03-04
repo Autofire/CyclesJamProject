@@ -1088,6 +1088,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2500513835111272430, guid: 324aee4ba60f64b4a8fc3b20d18793fa,
+        type: 3}
+      propertyPath: timeLimit.internalValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 324aee4ba60f64b4a8fc3b20d18793fa, type: 3}
 --- !u!1001 &8785554762981449406
@@ -1172,5 +1177,9 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 2004396650}
+    - target: {fileID: 500791121, guid: eb6c8ce9677b346b79302108a2d018da, type: 3}
+      propertyPath: targetScene
+      value: ResultsScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6c8ce9677b346b79302108a2d018da, type: 3}
