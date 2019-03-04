@@ -7,7 +7,7 @@ namespace Racer {
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class RacerBody : MonoBehaviour {
 
-		[SerializeField] private float forwardForce = 1f;
+		[SerializeField] public float forwardForce = 1f;
 		[SerializeField] private float turnForce = 30f;
 		[SerializeField] private float turnStiffnessFactor = 8f;
 
