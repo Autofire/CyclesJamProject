@@ -11,6 +11,12 @@ namespace Racer {
 		[SerializeField] private float turnForce = 30f;
 		[SerializeField] private float turnStiffnessFactor = 8f;
 
+		[Space(10)]
+		[SerializeField] private Transform modelTransform;
+		[SerializeField] private Vector3 turnUpRotation;
+		[SerializeField] private Vector3 forwardRotation;
+		[SerializeField] private Vector3 turnDownRotation;
+
 		private Rigidbody2D rb;
 
 		private void Awake() {
@@ -35,8 +41,24 @@ namespace Racer {
 		public void Turn(float magnitude) {
 			float clampedMagnitude = Mathf.Clamp(magnitude, -1f, 1f);
 			rb.AddForce(Vector2.up * turnForce * clampedMagnitude);
-		}
 
-	}
+			if (modelTransform != null) {
+				if (magnitude > 0f) {
+					modelTransform.rotation = Quaternion.Euler(
+						Vector3.Lerp(forwardRotation, turnUpRotation, magnitude)
+					);
+				}
+				else if(magnitude < 0f) {
+					modelTransform.rotation = Quaternion.Euler(
+						Vector3.Lerp(forwardRotation, turnDownRotation, Mathf.Abs(magnitude))
+					);
+				}
+				else {
+					modelTransform.rotation = Quaternion.Euler(forwardRotation);
+				}
+			}
+		} // End Turn function
 
-}
+	} // End class
+
+} // End namespace
