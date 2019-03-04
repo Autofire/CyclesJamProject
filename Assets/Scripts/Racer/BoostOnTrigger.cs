@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using ReachBeyond.EventObjects;
 
 namespace Racer {
 	[RequireComponent(typeof(Rigidbody2D))]
 	public class BoostOnTrigger : MonoBehaviour {
 
+		[SerializeField] private EventObjectInvoker invoker;
 		[SerializeField] private Vector2 boostImpulse;
 		[SerializeField] private string triggerTag = "Booster";
 
@@ -22,6 +22,7 @@ namespace Racer {
 		private void OnTriggerEnter2D(Collider2D other) {
 			if (enabled && other.CompareTag(triggerTag)) {
 				rb.AddForce(boostImpulse, ForceMode2D.Impulse);
+				invoker.Invoke();
 			}
 		}
 	} // End class
