@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68fc5864fe9c43df987d0cf722b2e68, type: 3}
   m_Name: PlayerCharacter
   m_EditorClassIdentifier: 
-  _defaultValue: {fileID: 1889738242903624, guid: 892bc6582b1eb4086b349ef1e2955706,
+  _defaultValue: {fileID: 1889738242903624, guid: e8d119fba2dba4f69b6cf808697c4566,
     type: 3}
-  _value: {fileID: 1889738242903624, guid: 0ae784184bedd43b088c50d0b20a6317, type: 3}
+  _value: {fileID: 1889738242903624, guid: 892bc6582b1eb4086b349ef1e2955706, type: 3}
