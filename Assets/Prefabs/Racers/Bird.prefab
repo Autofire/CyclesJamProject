@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 1742936088}
   - component: {fileID: 8872822027254068757}
   - component: {fileID: 3256913445120681318}
+  - component: {fileID: 668295154398964181}
+  - component: {fileID: 4841235139974622321}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -242,6 +244,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edb1b6b8f2bc49b18c571fed01907ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invoker:
+    gameEvent: {fileID: 0}
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
   boostImpulse: {x: 0.25, y: 0}
   triggerTag: Booster
 --- !u!114 &1742936087
@@ -343,6 +352,38 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &668295154398964181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52619340cb456c048b8f594366e1a410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 8107911896477999457, guid: e23eab5e6af2a304583531c8061fb38f,
+    type: 3}
+  triggerTags:
+  - Booster
+--- !u!114 &4841235139974622321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52619340cb456c048b8f594366e1a410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 5327646522268324512, guid: dbd9f4e174457134e9f053f4495d6227,
+    type: 3}
+  triggerTags:
+  - Wall
 --- !u!1001 &1796810958530171814
 PrefabInstance:
   m_ObjectHideFlags: 0

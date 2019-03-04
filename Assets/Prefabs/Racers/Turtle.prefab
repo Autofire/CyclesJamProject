@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 1742936088}
   - component: {fileID: 8872822027254068757}
   - component: {fileID: 3256913445120681318}
+  - component: {fileID: 8629548060976827387}
+  - component: {fileID: 2909783355855964751}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -350,6 +352,38 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8629548060976827387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52619340cb456c048b8f594366e1a410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 8107911896477999457, guid: e23eab5e6af2a304583531c8061fb38f,
+    type: 3}
+  triggerTags:
+  - Booster
+--- !u!114 &2909783355855964751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889738242903624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52619340cb456c048b8f594366e1a410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 5327646522268324512, guid: dbd9f4e174457134e9f053f4495d6227,
+    type: 3}
+  triggerTags:
+  - Wall
 --- !u!114 &2537629715415287077
 MonoBehaviour:
   m_ObjectHideFlags: 0
